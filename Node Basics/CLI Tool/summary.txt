@@ -1,0 +1,25 @@
+╔═══════════════════════════════════════════════════════════╗
+║                  TEXT ANALYSIS SUMMARY                    ║
+╚═══════════════════════════════════════════════════════════╝
+
+📄 File Analyzed: data.txt
+📅 Analysis Date: 6/21/2026, 3:48:53 PM
+
+════════════════════════════════════════════════════════════
+📊 STATISTICS
+════════════════════════════════════════════════════════════
+
+📝 Total Words:         65
+🔄 Unique Words:        54
+📝 Characters (no spaces): 403
+📖 Sentences:           11
+
+════════════════════════════════════════════════════════════
+🔍 UNIQUE WORDS (54 total)
+════════════════════════════════════════════════════════════
+
+nodejs, is, a, powerful, javascript, runtime, built, on, chromes, v, engine, it, allows, developers, to, build, scalable, network, applications, using, eventdriven, programming, the, event, loop, makes, nonblocking, and, efficient, for, io, operations, many, companies, use, building, rest, apis, realtime, learning, opens, up, exciting, opportunities, in, backend, development, ecosystem, includes, npm, largest, package, registry, world
+
+════════════════════════════════════════════════════════════
+✅ Analysis completed successfully!
+════════════════════════════════════════════════════════════

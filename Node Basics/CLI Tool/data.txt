@@ -1,0 +1,6 @@
+Node.js is a powerful JavaScript runtime built on Chrome's V8 engine. 
+It allows developers to build scalable network applications using event-driven programming. 
+The event loop makes Node.js non-blocking and efficient for I/O operations. 
+Many companies use Node.js for building REST APIs and real-time applications. 
+Learning Node.js opens up exciting opportunities in backend development. 
+The Node.js ecosystem includes npm, the largest package registry in the world.
