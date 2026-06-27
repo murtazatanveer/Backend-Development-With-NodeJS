@@ -1,5 +1,3 @@
-const { log } = require("console");
-
 const stu = {
   name: "murtaza",
   age: 23,
