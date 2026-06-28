@@ -26,7 +26,7 @@ app.get("/users/:id", (req, res) => {
   if (u) {
     return res.send(u);
   }
-  res.send({ message: "User Not Found" });
+  res.status(404).send("User Not Found");
 });
 
 app.post("/users", (req, res) => {
