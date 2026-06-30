@@ -48,10 +48,14 @@ app.get("/products", (req, res) => {
 app.get("/products/:id", (req, res) => {
   const pId = Number(req.params.id);
 
+  if (isNaN(pId)) {
+    return res.send({ message: "Invalid Id format" });
+  }
+
   const product = products.find((p) => p.id === pId);
 
   if (product) {
-    return res.send(product);
+    return res.json(product);
   }
   res.status(404).send("Product Not Found");
 });
@@ -76,23 +80,31 @@ app.post("/products", (req, res) => {
 });
 
 app.get("/search", (req, res) => {
-  const n = req.query.productname.toLowerCase();
+  const n = req.query.productname;
 
-  const prod = products.find((p) => p.name.toLowerCase().includes(n));
-  if (!prod) {
-    return res.status(404).send({ message: "Product Not Found" });
+  if (!n) {
+    return res.status(404).send({ message: "Search Keyword Missing" });
   }
-  res.send(prod);
+
+  const prods = products.filter((p) =>
+    p.name.toLowerCase().includes(n.toLowerCase()),
+  );
+  if (prods.length == 0) {
+    return res
+      .status(404)
+      .send({ message: "No Product found for such Keyword" });
+  }
+  res.send(prods);
 });
 
 app.get("/products/category/:cat", (req, res) => {
   const cat = req.params.cat.toLowerCase();
 
-  const prod = products.find((p) => p.category.toLowerCase() === cat);
-  if (!prod) {
+  const prods = products.filter((p) => p.category.toLowerCase() === cat);
+  if (prods.length == 0) {
     return res.send({ message: `Product with category ${cat}, not found` });
   }
-  res.send(prod);
+  res.send(prods);
 });
 
 const PORT = 3000;
