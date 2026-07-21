@@ -19,4 +19,8 @@ router.post("/", (req, res) => {
   });
 });
 
+router.get("/products", (req, res) => {
+  res.json({ message: "All Products List Received" });
+});
+
 module.exports = router;
